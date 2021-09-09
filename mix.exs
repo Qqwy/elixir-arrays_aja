@@ -53,7 +53,7 @@ defmodule ArraysAja.MixProject do
 
   defp package() do
     [
-      name: :arrays_rrb_vector,
+      name: :arrays_aja,
       files: ["lib", "mix.exs", "README*"],
       maintainers: ["Qqwy/Wiebe-Marten Wijnja"],
       licenses: ["Apache 2.0"],
