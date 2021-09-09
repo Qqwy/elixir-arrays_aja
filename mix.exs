@@ -12,7 +12,8 @@ defmodule ArraysAja.MixProject do
       name: "ArraysAja",
       description: description(),
       source_url: @source_url,
-      package: package()
+      package: package(),
+      docs: docs()
     ]
   end
 
@@ -57,6 +58,13 @@ defmodule ArraysAja.MixProject do
       maintainers: ["Qqwy/Wiebe-Marten Wijnja"],
       licenses: ["Apache 2.0"],
       links: %{"GitHub" => @source_url}
+    ]
+  end
+
+  defp docs() do
+    [
+      main: "readme",
+      extras: ["README.md", "DOCUMENTATION.md"]
     ]
   end
 end
