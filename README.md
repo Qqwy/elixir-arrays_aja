@@ -13,7 +13,7 @@ Aja's implementation is _fast_. As can be seen from below benchmarking graphs, `
 
 
 ![random_read](https://github.com/Qqwy/elixir-arrays_aja/blob/main/benchmark_runs/random_access_graph.png)
-![random_read](https://github.com/Qqwy/elixir-arrays_aja/blob/main/benchmark_runs/random_access_log.png)
+![random_read](https://github.com/Qqwy/elixir-arrays_aja/blob/main/benchmark_runs/random_access_graph_log.png)
 ![random_update](https://github.com/Qqwy/elixir-arrays_aja/blob/main/benchmark_runs/random_element_update_graph.png)
 ![random_update](https://github.com/Qqwy/elixir-arrays_aja/blob/main/benchmark_runs/random_element_update_graph_log.png)
 ![append](https://github.com/Qqwy/elixir-arrays_aja/blob/main/benchmark_runs/append_graph.png)
