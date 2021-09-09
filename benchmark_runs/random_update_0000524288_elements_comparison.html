@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+  <span class="input-label">
+    0000524288 elements
+  </span>
+
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.12.0</li>
+    <li>Erlang: 24.0.1</li>
+    <li>Operating system: Linux</li>
+    <li>Available memory: 7.60 GB</li>
+    <li>CPU Information: Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz</li>
+    <li>Number of Available Cores: 8</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          Run Time Comparison
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#comparison">
+            <i
+            class="benchee-help-icon icon-question-circle-o"
+            title="Comparisons of the different benchmarking jobs. For Iterations per Second higher is better, the black whiskers denote standard deviation. otherwise it is runtime so lower is better. The Box Plot shows a distribution of run times with the median and outliers."
+            ></i>
+          </a>
+        </h2>
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="random_update_0000524288_elements_arrays_replace_3__a_vector_.html">Arrays.replace/3 (A.Vector)</a></td>
+        
+        
+          <td>546.13 K</td>
+          <td>1.83 μs</td>
+          <td>±82.25%</td>
+          <td>1.51 μs</td>
+          <td>1.78 μs, 1.41 μs</td>
+          <td>1.04 μs</td>
+          <td>14.88 μs</td>
+        
+        <td>303</td>
+      </tr>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="random_update_0000524288_elements_arrays_replace_3__maparray_.html">Arrays.replace/3 (MapArray)</a></td>
+        
+        
+          <td>240.13 K</td>
+          <td>4.16 μs</td>
+          <td>±26.29%</td>
+          <td>3.73 μs</td>
+          <td>4.04 μs</td>
+          <td>3.14 μs</td>
+          <td>6.74 μs</td>
+        
+        <td>49</td>
+      </tr>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="random_update_0000524288_elements_arrays_replace_3__erlangarray_.html">Arrays.replace/3 (ErlangArray)</a></td>
+        
+        
+          <td>217.69 K</td>
+          <td>4.59 μs</td>
+          <td>±45.07%</td>
+          <td>4.06 μs</td>
+          <td>3.84 μs</td>
+          <td>3.19 μs</td>
+          <td>17.76 μs</td>
+        
+        <td>49</td>
+      </tr>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="random_update_0000524288_elements_list_replace_at_3.html">List.replace_at/3</a></td>
+        
+        
+          <td>0.22 K</td>
+          <td>4526.95 μs</td>
+          <td>±85.79%</td>
+          <td>3426.18 μs</td>
+          <td>none</td>
+          <td>84.46 μs</td>
+          <td>12688.42 μs</td>
+        
+        <td>61</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="ips-comparison" class="job-count-4 plot"></div>
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-time-box-plot" class="job-count-4 plot"></div>
+        </section>
+      </article>
+    
+
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.0.1 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.0</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-1.30.1.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenarios     = [{"name":"Arrays.replace/3 (A.Vector)","job_name":"Arrays.replace/3 (A.Vector)","input_name":"0000524288 elements","run_time_data":{"statistics":{"absolute_difference":null,"average":1831.0627062706271,"ips":546130.9416523074,"maximum":14879.0,"median":1506.0,"minimum":1036.0,"mode":[1778.0,1409.0],"percentiles":{"50":1506.0,"99":12588.119999999994},"relative_less":null,"relative_more":null,"sample_size":303,"std_dev":1506.067067766637,"std_dev_ips":449198.06574300776,"std_dev_ratio":0.8225098259109229},"samples":[2519.0,1515.0,1111.0,1506.0,1423.0,1412.0,1514.0,1164.0,1777.0,1340.0,1616.0,1409.0,1084.0,1517.0,1301.0,1343.0,1190.0,1661.0,12602.0,1319.0,1668.0,1576.0,1343.0,1366.0,1409.0,1456.0,1311.0,1451.0,1073.0,1266.0,2685.0,2123.0,1312.0,1227.0,1173.0,1.6e3,12255.0,1541.0,1449.0,1304.0,1140.0,1739.0,1362.0,1778.0,1341.0,1336.0,1395.0,1566.0,1586.0,1240.0,1625.0,1196.0,1209.0,1388.0,1473.0,1374.0,1177.0,1677.0,1844.0,1439.0,1036.0,1136.0,1227.0,1424.0,1635.0,1769.0,1372.0,1490.0,1484.0,1531.0,1598.0,1536.0,1205.0,1343.0,1289.0,1172.0,1399.0,1397.0,1272.0,1232.0,1274.0,1602.0,1294.0,1211.0,1299.0,1267.0,1180.0,2609.0,1797.0,1131.0,1545.0,1358.0,1313.0,1675.0,1404.0,1344.0,1421.0,1549.0,1132.0,1794.0,1458.0,1046.0,1138.0,1969.0,1224.0,1506.0,1784.0,1261.0,1488.0,1293.0,1598.0,3083.0,2435.0,2454.0,2340.0,2216.0,2740.0,2485.0,2264.0,2292.0,8792.0,2376.0,2466.0,2553.0,2379.0,2127.0,2358.0,2623.0,2645.0,2132.0,2190.0,2581.0,2582.0,2625.0,2713.0,2264.0,2224.0,2482.0,3379.0,2369.0,2569.0,2307.0,2256.0,2279.0,2583.0,2329.0,2310.0,2330.0,2372.0,2108.0,3816.0,1.7e3,5006.0,3125.0,2098.0,2693.0,1718.0,1817.0,1686.0,2192.0,1574.0,1572.0,1491.0,1853.0,1904.0,2080.0,1537.0,2312.0,1582.0,1493.0,1646.0,1846.0,1760.0,1724.0,1131.0,1238.0,1587.0,1306.0,1789.0,2114.0,1231.0,1380.0,1409.0,1542.0,1656.0,1389.0,1221.0,1370.0,1734.0,1916.0,1351.0,1902.0,2042.0,2040.0,1487.0,1363.0,1397.0,1459.0,1675.0,1761.0,1256.0,1833.0,1476.0,1414.0,1321.0,1486.0,1.3e3,1317.0,1265.0,1641.0,1461.0,1707.0,1629.0,1688.0,1432.0,1469.0,1668.0,1570.0,14585.0,1474.0,1630.0,1349.0,1638.0,1497.0,1381.0,1286.0,1409.0,1956.0,1415.0,1466.0,1313.0,1127.0,1429.0,1403.0,1271.0,1217.0,1194.0,1143.0,1402.0,1667.0,1630.0,1420.0,1220.0,1392.0,1387.0,1678.0,1397.0,1474.0,1259.0,1640.0,1645.0,14879.0,1709.0,1757.0,1178.0,1227.0,1493.0,1504.0,1234.0,1658.0,1051.0,1778.0,1573.0,1526.0,1333.0,1725.0,1549.0,1778.0,1749.0,1490.0,1845.0,1391.0,1333.0,1961.0,1642.0,1388.0,1384.0,1486.0,1848.0,1602.0,1323.0,1264.0,1445.0,1333.0,1473.0,1537.0,1903.0,1277.0,1326.0,1348.0,1789.0,1356.0,1262.0,1473.0,1471.0,1386.0,1502.0,1897.0,1707.0,2013.0,1396.0,1778.0,1521.0]},"memory_usage_data":{"statistics":{"absolute_difference":null,"average":null,"ips":null,"maximum":null,"median":null,"minimum":null,"mode":null,"percentiles":null,"relative_less":null,"relative_more":null,"sample_size":0,"std_dev":null,"std_dev_ips":null,"std_dev_ratio":null},"samples":[]},"tag":null},{"name":"Arrays.replace/3 (MapArray)","job_name":"Arrays.replace/3 (MapArray)","input_name":"0000524288 elements","run_time_data":{"statistics":{"absolute_difference":2333.2638243416177,"average":4164.326530612245,"ips":240134.86758277303,"maximum":6744.0,"median":3733.0,"minimum":3139.0,"mode":4045.0,"percentiles":{"50":3733.0,"99":6744.0},"relative_less":0.43970200050605107,"relative_more":2.2742675695109518,"sample_size":49,"std_dev":1094.9745694869491,"std_dev_ips":63141.43987445538,"std_dev_ratio":0.2629415732502524},"samples":[6197.0,6455.0,6621.0,3726.0,3819.0,3879.0,4056.0,3870.0,3407.0,3658.0,3678.0,3226.0,4045.0,3587.0,3527.0,3211.0,3204.0,3635.0,3139.0,3340.0,6385.0,6744.0,6640.0,5433.0,6486.0,3883.0,5003.0,4633.0,3439.0,3920.0,3750.0,3491.0,3733.0,3765.0,3827.0,4045.0,3158.0,3558.0,3201.0,4222.0,3641.0,3670.0,3197.0,3304.0,3655.0,3252.0,3610.0,5363.0,4764.0]},"memory_usage_data":{"statistics":{"absolute_difference":null,"average":null,"ips":null,"maximum":null,"median":null,"minimum":null,"mode":null,"percentiles":null,"relative_less":null,"relative_more":null,"sample_size":0,"std_dev":null,"std_dev_ips":null,"std_dev_ratio":null},"samples":[]},"tag":null},{"name":"Arrays.replace/3 (ErlangArray)","job_name":"Arrays.replace/3 (ErlangArray)","input_name":"0000524288 elements","run_time_data":{"statistics":{"absolute_difference":2762.6719876069237,"average":4593.734693877551,"ips":217687.80015371426,"maximum":17762.0,"median":4056.0,"minimum":3190.0,"mode":3840.0,"percentiles":{"50":4056.0,"99":17762.0},"relative_less":0.39860001247155946,"relative_more":2.508780654068221,"sample_size":49,"std_dev":2070.430951270675,"std_dev_ips":98113.53706450883,"std_dev_ratio":0.4507075591522752},"samples":[5664.0,3962.0,5406.0,5073.0,5627.0,3444.0,17762.0,3896.0,5430.0,3678.0,3840.0,3705.0,3457.0,3190.0,3595.0,3820.0,3717.0,3561.0,5.5e3,5522.0,4586.0,4568.0,4478.0,5282.0,4523.0,7005.0,4429.0,4330.0,3863.0,3664.0,3840.0,3662.0,4049.0,4056.0,3793.0,4075.0,4579.0,4514.0,4036.0,3840.0,5155.0,4117.0,3610.0,4764.0,3543.0,3750.0,4070.0,5040.0,4023.0]},"memory_usage_data":{"statistics":{"absolute_difference":null,"average":null,"ips":null,"maximum":null,"median":null,"minimum":null,"mode":null,"percentiles":null,"relative_less":null,"relative_more":null,"sample_size":0,"std_dev":null,"std_dev_ips":null,"std_dev_ratio":null},"samples":[]},"tag":null},{"name":"List.replace_at/3","job_name":"List.replace_at/3","input_name":"0000524288 elements","run_time_data":{"statistics":{"absolute_difference":4525118.281556025,"average":4526949.344262295,"ips":220.89931297054494,"maximum":12688415.0,"median":3426184.0,"minimum":84459.0,"mode":null,"percentiles":{"50":3426184.0,"99":12688415.0},"relative_less":4.044804938211683e-4,"relative_more":2472.307108194263,"sample_size":61,"std_dev":3883474.894905077,"std_dev_ips":189.50000783865315,"std_dev_ratio":0.8578569362228907},"samples":[84459.0,595075.0,11993493.0,8423803.0,1709902.0,9998710.0,3701475.0,5002979.0,9337044.0,1127410.0,6396280.0,1183326.0,9144124.0,907427.0,9286841.0,1510840.0,8647303.0,3156008.0,9710177.0,1831090.0,8645031.0,425422.0,5454961.0,9166780.0,849038.0,9146711.0,2383451.0,732343.0,8330109.0,3798971.0,7363725.0,653595.0,275178.0,8157845.0,4074671.0,4148465.0,2309549.0,8613444.0,4098848.0,5071393.0,560045.0,220115.0,1213607.0,1186345.0,493358.0,12115391.0,1016495.0,8001617.0,1756271.0,9159004.0,4418569.0,3426184.0,2734275.0,1719302.0,1514445.0,1076544.0,407260.0,12688415.0,2254931.0,161105.0,12573336.0]},"memory_usage_data":{"statistics":{"absolute_difference":null,"average":null,"ips":null,"maximum":null,"median":null,"minimum":null,"mode":null,"percentiles":null,"relative_less":null,"relative_more":null,"sample_size":0,"std_dev":null,"std_dev_ips":null,"std_dev_ratio":null},"samples":[]},"tag":null}];
+      var inputHeadline = " (0000524288 elements)";
+
+      
+        drawIpsComparisonChart(scenarios, inputHeadline);
+        drawRunTimeComparisonBoxPlot(scenarios, inputHeadline);
+      
+
+      
+    </script>
+  </body>
+</html>

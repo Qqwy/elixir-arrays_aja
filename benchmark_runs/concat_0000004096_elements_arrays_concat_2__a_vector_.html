@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+  <span class="input-label">
+    0000004096 elements
+  </span>
+
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.12.0</li>
+    <li>Erlang: 24.0.1</li>
+    <li>Operating system: Linux</li>
+    <li>Available memory: 7.60 GB</li>
+    <li>CPU Information: Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz</li>
+    <li>Number of Available Cores: 8</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          <a name="run_time" href="#run_time">Arrays.concat/2 (A.Vector) Run Time</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual run time distribution for Arrays.concat/2 (A.Vector).
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">Arrays.concat/2 (A.Vector)</td>
+        
+        
+          <td>3.57 K</td>
+          <td>0.28 ms</td>
+          <td>±20.48%</td>
+          <td>0.27 ms</td>
+          <td>none</td>
+          <td>0.22 ms</td>
+          <td>0.63 ms</td>
+        
+        <td>133</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-times-histogram" class="plot"></div>
+        </section>
+        <section class="benchee-plot-container">
+          <div id="raw-run-times" class="plot"></div>
+        </section>
+      </article>
+    
+
+    
+      <article>
+        <h2>
+          <a name="memory" href="#memory">Arrays.concat/2 (A.Vector) Memory</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual memory usage distribution for Arrays.concat/2 (A.Vector).
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">Arrays.concat/2 (A.Vector)</td>
+        
+        
+          <td>0.38 MB</td>
+          <td>±0.00%</td>
+          <td>0.38 MB</td>
+          <td>0.38 MB</td>
+          <td>0.38 MB</td>
+          <td>0.38 MB</td>
+        
+        <td>130</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        
+      </article>
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.0.1 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.0</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-1.30.1.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenario = {"name":"Arrays.concat/2 (A.Vector)","job_name":"Arrays.concat/2 (A.Vector)","input_name":"0000004096 elements","run_time_data":{"statistics":{"absolute_difference":246987.45328288875,"average":279920.0902255639,"ips":3572.4481197265427,"maximum":630592.0,"median":265655.0,"minimum":224748.0,"mode":null,"percentiles":{"50":265655.0,"99":625613.0399999999},"relative_less":0.11765013692349677,"relative_more":8.499777613095857,"sample_size":133,"std_dev":57315.25836605429,"std_dev_ips":731.4794262050154,"std_dev_ratio":0.20475578698145164},"samples":[314336.0,282813.0,269883.0,256374.0,253678.0,259919.0,253844.0,258758.0,253541.0,254667.0,268680.0,262272.0,242060.0,257936.0,242089.0,242272.0,320844.0,316946.0,315391.0,256130.0,273908.0,405604.0,253180.0,242381.0,256991.0,270211.0,383228.0,263723.0,242592.0,242368.0,254930.0,253314.0,296707.0,242186.0,269045.0,304768.0,317077.0,242669.0,279246.0,452431.0,257041.0,241806.0,263592.0,263205.0,630592.0,387379.0,280464.0,269316.0,342007.0,257985.0,268246.0,256966.0,273572.0,255786.0,257053.0,256544.0,269715.0,272682.0,269189.0,273372.0,279106.0,242276.0,253765.0,279729.0,301549.0,298599.0,270253.0,257218.0,280241.0,269396.0,256893.0,270008.0,257329.0,281576.0,280431.0,269068.0,233716.0,257847.0,265655.0,237319.0,224873.0,242882.0,2.397e5,236320.0,263128.0,615948.0,248779.0,271553.0,252228.0,310497.0,272648.0,284159.0,251176.0,254698.0,330913.0,267310.0,298988.0,274327.0,274947.0,359060.0,327493.0,249493.0,272977.0,241484.0,263922.0,277178.0,229099.0,334853.0,234233.0,387604.0,239355.0,255784.0,2.83e5,277537.0,364039.0,234627.0,224748.0,225143.0,256073.0,291260.0,261954.0,311317.0,227740.0,320030.0,248614.0,261947.0,286224.0,302701.0,380433.0,274184.0,254350.0,261798.0,276566.0]},"memory_usage_data":{"statistics":{"absolute_difference":385360.0,"average":395776.0,"ips":null,"maximum":395776,"median":395776.0,"minimum":395776,"mode":395776,"percentiles":{"50":395776.0,"99":395776.0},"relative_less":0.02631791720569211,"relative_more":37.996927803379414,"sample_size":130,"std_dev":0.0,"std_dev_ips":null,"std_dev_ratio":0.0},"samples":[395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776,395776]},"tag":null};
+
+      var inputHeadline = " (0000004096 elements)"
+
+      
+        drawRunTimeHistogram(scenario, inputHeadline);
+        drawRawRunTimeChart(scenario, inputHeadline);
+      
+
+      
+        if (scenario.memory_usage_data.statistics.std_dev !== 0) {
+          drawMemoryHistogram(scenario, inputHeadline);
+          drawRawMemoryChart(scenario, inputHeadline);
+        };
+      
+    </script>
+  </body>
+</html>

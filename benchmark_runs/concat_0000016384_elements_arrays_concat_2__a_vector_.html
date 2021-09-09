@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+  <span class="input-label">
+    0000016384 elements
+  </span>
+
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.12.0</li>
+    <li>Erlang: 24.0.1</li>
+    <li>Operating system: Linux</li>
+    <li>Available memory: 7.60 GB</li>
+    <li>CPU Information: Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz</li>
+    <li>Number of Available Cores: 8</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          <a name="run_time" href="#run_time">Arrays.concat/2 (A.Vector) Run Time</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual run time distribution for Arrays.concat/2 (A.Vector).
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">Arrays.concat/2 (A.Vector)</td>
+        
+        
+          <td>816.93</td>
+          <td>1.22 ms</td>
+          <td>±12.40%</td>
+          <td>1.17 ms</td>
+          <td>none</td>
+          <td>1.07 ms</td>
+          <td>1.54 ms</td>
+        
+        <td>28</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-times-histogram" class="plot"></div>
+        </section>
+        <section class="benchee-plot-container">
+          <div id="raw-run-times" class="plot"></div>
+        </section>
+      </article>
+    
+
+    
+      <article>
+        <h2>
+          <a name="memory" href="#memory">Arrays.concat/2 (A.Vector) Memory</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual memory usage distribution for Arrays.concat/2 (A.Vector).
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">Arrays.concat/2 (A.Vector)</td>
+        
+        
+          <td>1.48 MB</td>
+          <td>±0.00%</td>
+          <td>1.48 MB</td>
+          <td>1.48 MB</td>
+          <td>1.48 MB</td>
+          <td>1.48 MB</td>
+        
+        <td>26</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        
+      </article>
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.0.1 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.0</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-1.30.1.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenario = {"name":"Arrays.concat/2 (A.Vector)","job_name":"Arrays.concat/2 (A.Vector)","input_name":"0000016384 elements","run_time_data":{"statistics":{"absolute_difference":1088153.799107143,"average":1224100.642857143,"ips":816.9262926501899,"maximum":1538066.0,"median":1170741.0,"minimum":1068396.0,"mode":null,"percentiles":{"50":1170741.0,"99":1538066.0},"relative_less":0.11105855106218214,"relative_more":9.00425937882168,"sample_size":28,"std_dev":151747.37603594223,"std_dev_ips":101.27142898568341,"std_dev_ratio":0.12396642132443657},"samples":[1079319.0,1270737.0,1152189.0,1100309.0,1114516.0,1175386.0,1068396.0,1166096.0,1152321.0,1202039.0,1095944.0,1186686.0,1110915.0,1183615.0,1162046.0,1099097.0,1103733.0,1246587.0,1219652.0,1228797.0,1501245.0,1535872.0,1524173.0,1538066.0,1504305.0,1288180.0,1104157.0,1160440.0]},"memory_usage_data":{"statistics":{"absolute_difference":1470424.0,"average":1546680.0,"ips":null,"maximum":1546680,"median":1546680.0,"minimum":1546680,"mode":1546680,"percentiles":{"50":1546680.0,"99":1546680.0},"relative_less":0.04930302324979957,"relative_more":20.282731850608478,"sample_size":26,"std_dev":0.0,"std_dev_ips":null,"std_dev_ratio":0.0},"samples":[1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680,1546680]},"tag":null};
+
+      var inputHeadline = " (0000016384 elements)"
+
+      
+        drawRunTimeHistogram(scenario, inputHeadline);
+        drawRawRunTimeChart(scenario, inputHeadline);
+      
+
+      
+        if (scenario.memory_usage_data.statistics.std_dev !== 0) {
+          drawMemoryHistogram(scenario, inputHeadline);
+          drawRawMemoryChart(scenario, inputHeadline);
+        };
+      
+    </script>
+  </body>
+</html>
