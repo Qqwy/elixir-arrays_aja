@@ -1,13 +1,18 @@
 defmodule ArraysAja.MixProject do
   use Mix.Project
+  @source_url "https://github.com/Qqwy/elixir-arrays_aja"
 
   def project do
     [
       app: :arrays_aja,
       version: "0.1.0",
-      elixir: "~> 1.12",
+      elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      name: "ArraysAja",
+      description: description(),
+      source_url: @source_url,
+      package: package()
     ]
   end
 
@@ -35,6 +40,23 @@ defmodule ArraysAja.MixProject do
       {:benchee_csv, "~> 1.0", only: [:dev]},
       {:benchee_markdown, "~> 0.2", only: [:dev]},
       {:benchee_html, "~> 1.0", only: [:dev]}
+    ]
+  end
+
+  defp description do
+    """
+    An `Arrays`  implementation for `Aja`'s `Vector` datatype, which is an implementation of a 'Hickey Trie' Vector written completely in Elixir.
+    This implementation very efficient for most array-based operations.
+    """
+  end
+
+  defp package() do
+    [
+      name: :arrays_rrb_vector,
+      files: ["lib", "mix.exs", "README*"],
+      maintainers: ["Qqwy/Wiebe-Marten Wijnja"],
+      licenses: ["Apache 2.0"],
+      links: %{"GitHub" => @source_url}
     ]
   end
 end
