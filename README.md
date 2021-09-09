@@ -1,5 +1,8 @@
 # ArraysAja
 
+[![Hex Version](https://img.shields.io/hexpm/v/arrays_aja.svg)](https://hex.pm/packages/arrays_aja)
+[![Documentation](https://img.shields.io/badge/hexdocs-latest-blue.svg)](https://hexdocs.pm/arrays_aja/index.html)
+
 Provides an [Arrays](https://github.com/Qqwy/elixir-arrays) implementation for [Aja](https://github.com/sabiwara/aja)'s `Vector` datatype, which is an implementation of a 'Hickey Trie' Vector written in Elixir.
 
 ## Performance
