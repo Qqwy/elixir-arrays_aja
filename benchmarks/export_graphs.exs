@@ -17,12 +17,12 @@ defmodule Chart do
         "-",
         :title,
         title,
-        :smooth,
-        :csplines,
+        # :smooth,
+        # :acsplines,
         :with,
-        :lines,
-        :pn,
-        5,
+        :linespoints,
+        # :pn,
+        # 5,
         :lc,
         :rgb,
         color,
@@ -50,7 +50,8 @@ defmodule Chart do
     |> File.stream!
     |> CSV.decode!(headers: true)
     |> Enum.group_by(&(escape_underscores(&1["Name"])), fn row ->
-      x = String.to_integer(row["Input"])
+      {x, " elements"} = Integer.parse(row["Input"])
+      # x = String.to_integer(row["Input"])
       y = 1 / String.to_float(row["Iterations per Second"])
       {x, y}
     end
