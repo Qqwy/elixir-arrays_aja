@@ -32,7 +32,7 @@ defmodule ArraysAja.MixProject do
       {:arrays, "~> 2.0"},
       {:aja, "~> 0.5.3"},
 
-      {:ex_doc, "~> 0.23", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.23", only: :dev, runtime: false, override: true},
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.13", only: [:test]},
@@ -40,7 +40,10 @@ defmodule ArraysAja.MixProject do
       {:benchee, "~> 1.0", only: [:dev]},
       {:benchee_csv, "~> 1.0", only: [:dev]},
       {:benchee_markdown, "~> 0.2", only: [:dev]},
-      {:benchee_html, "~> 1.0", only: [:dev]}
+      {:benchee_html, "~> 1.0", only: [:dev]},
+
+      {:gnuplot, "~> 1.20", only: [:dev]},
+      {:csv, "~> 2.4", only: [:dev]},
     ]
   end
 
