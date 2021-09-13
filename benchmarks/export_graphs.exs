@@ -86,6 +86,6 @@ end
 
 
 Chart.plot_from_csv("benchmark_runs/concat.csv", "Concatenate two equally-sized containers", "No. elements", "Average running time")
-# Chart.plot_from_csv("benchmark_runs/random_access.csv", "Reading an element at a random index", "No. elements", "Average running time")
-# Chart.plot_from_csv("benchmark_runs/random_update.csv", "Updating an element at a random index", "No. elements", "Average running time")
-# Chart.plot_from_csv("benchmark_runs/append.csv", "Appending an element", "No. elements", "Average running time")
+Chart.plot_from_csv("benchmark_runs/random_access.csv", "Reading an element at a random index", "No. elements", "Average running time")
+Chart.plot_from_csv("benchmark_runs/random_update.csv", "Updating an element at a random index", "No. elements", "Average running time")
+Chart.plot_from_csv("benchmark_runs/append.csv", "Appending an element", "No. elements", "Average running time")
