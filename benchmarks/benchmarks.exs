@@ -38,10 +38,10 @@ defmodule Benchmarks do
 
 
   def run_benchmarks() do
-    # concat_benchmark()
-    random_access_benchmark()
-    random_update_benchmark()
-    append_benchmark()
+    concat_benchmark()
+    # random_access_benchmark()
+    # random_update_benchmark()
+    # append_benchmark()
   end
 
   def concat_benchmark do
