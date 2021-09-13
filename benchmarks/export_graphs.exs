@@ -50,8 +50,8 @@ defmodule Chart do
     |> File.stream!
     |> CSV.decode!(headers: true)
     |> Enum.group_by(&(escape_underscores(&1["Name"])), fn row ->
-      {x, " elements"} = Integer.parse(row["Input"])
-      # x = String.to_integer(row["Input"])
+      # {x, " elements"} = Integer.parse(row["Input"])
+      x = String.to_integer(row["Input"])
       y = 1 / String.to_float(row["Iterations per Second"])
       {x, y}
     end
@@ -86,6 +86,6 @@ end
 
 
 Chart.plot_from_csv("benchmark_runs/concat.csv", "Concatenate two equally-sized containers", "No. elements", "Average running time")
-Chart.plot_from_csv("benchmark_runs/random_access.csv", "Reading an element at a random index", "No. elements", "Average running time")
-Chart.plot_from_csv("benchmark_runs/random_update.csv", "Updating an element at a random index", "No. elements", "Average running time")
-Chart.plot_from_csv("benchmark_runs/append.csv", "Appending an element", "No. elements", "Average running time")
+# Chart.plot_from_csv("benchmark_runs/random_access.csv", "Reading an element at a random index", "No. elements", "Average running time")
+# Chart.plot_from_csv("benchmark_runs/random_update.csv", "Updating an element at a random index", "No. elements", "Average running time")
+# Chart.plot_from_csv("benchmark_runs/append.csv", "Appending an element", "No. elements", "Average running time")

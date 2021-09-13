@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+  <span class="input-label">
+    0000700
+  </span>
+
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.12.0</li>
+    <li>Erlang: 24.0.1</li>
+    <li>Operating system: Linux</li>
+    <li>Available memory: 7.60 GB</li>
+    <li>CPU Information: Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz</li>
+    <li>Number of Available Cores: 8</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          Run Time Comparison
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#comparison">
+            <i
+            class="benchee-help-icon icon-question-circle-o"
+            title="Comparisons of the different benchmarking jobs. For Iterations per Second higher is better, the black whiskers denote standard deviation. otherwise it is runtime so lower is better. The Box Plot shows a distribution of run times with the median and outliers."
+            ></i>
+          </a>
+        </h2>
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="concat_0000700_kernel____2__list_.html">Kernel.++/2 (list)</a></td>
+        
+        
+          <td>399.32 K</td>
+          <td>2.50 μs</td>
+          <td>±10.38%</td>
+          <td>2.46 μs</td>
+          <td>none</td>
+          <td>2.18 μs</td>
+          <td>3.25 μs</td>
+        
+        <td>16</td>
+      </tr>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="concat_0000700_arrays_concat_2__a_vector_.html">Arrays.concat/2 (A.Vector)</a></td>
+        
+        
+          <td>22.46 K</td>
+          <td>44.52 μs</td>
+          <td>±7.91%</td>
+          <td>43.71 μs</td>
+          <td>none</td>
+          <td>41.18 μs</td>
+          <td>55.49 μs</td>
+        
+        <td>16</td>
+      </tr>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="concat_0000700_arrays_concat_2__erlangarray_.html">Arrays.concat/2 (ErlangArray)</a></td>
+        
+        
+          <td>4.01 K</td>
+          <td>249.42 μs</td>
+          <td>±18.49%</td>
+          <td>237.44 μs</td>
+          <td>none</td>
+          <td>223.72 μs</td>
+          <td>418.32 μs</td>
+        
+        <td>16</td>
+      </tr>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="concat_0000700_arrays_concat_2__maparray_.html">Arrays.concat/2 (MapArray)</a></td>
+        
+        
+          <td>3.86 K</td>
+          <td>259.24 μs</td>
+          <td>±20.64%</td>
+          <td>235.73 μs</td>
+          <td>none</td>
+          <td>221.05 μs</td>
+          <td>405.20 μs</td>
+        
+        <td>16</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="ips-comparison" class="job-count-4 plot"></div>
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-time-box-plot" class="job-count-4 plot"></div>
+        </section>
+      </article>
+    
+
+    
+      <article>
+        <h2>
+          Memory Usage Comparison
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#comparison">
+            <i
+            class="benchee-help-icon icon-question-circle-o"
+            title="This is a memory usage comparison"
+            ></i>
+          </a>
+        </h2>
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="concat_0000700_kernel____2__list_.html">Kernel.++/2 (list)</a></td>
+        
+        
+          <td>10 KB</td>
+          <td>±0.00%</td>
+          <td>10 KB</td>
+          <td>10 KB</td>
+          <td>10 KB</td>
+          <td>10 KB</td>
+        
+        <td>4</td>
+      </tr>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="concat_0000700_arrays_concat_2__a_vector_.html">Arrays.concat/2 (A.Vector)</a></td>
+        
+        
+          <td>68.95 KB</td>
+          <td>±0.00%</td>
+          <td>68.95 KB</td>
+          <td>68.95 KB</td>
+          <td>68.95 KB</td>
+          <td>68.95 KB</td>
+        
+        <td>5</td>
+      </tr>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="concat_0000700_arrays_concat_2__erlangarray_.html">Arrays.concat/2 (ErlangArray)</a></td>
+        
+        
+          <td>328.62 KB</td>
+          <td>±0.00%</td>
+          <td>328.62 KB</td>
+          <td>328.62 KB</td>
+          <td>328.62 KB</td>
+          <td>328.62 KB</td>
+        
+        <td>5</td>
+      </tr>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="concat_0000700_arrays_concat_2__maparray_.html">Arrays.concat/2 (MapArray)</a></td>
+        
+        
+          <td>292.18 KB</td>
+          <td>±0.00%</td>
+          <td>292.18 KB</td>
+          <td>292.18 KB</td>
+          <td>292.18 KB</td>
+          <td>292.18 KB</td>
+        
+        <td>5</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="memory-comparison" class="job-count-4 plot"></div>
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="memory-box-plot" class="job-count-4 plot"></div>
+        </section>
+      </article>
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.0.1 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.0</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-1.30.1.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenarios     = [{"name":"Kernel.++/2 (list)","job_name":"Kernel.++/2 (list)","input_name":"0000700","run_time_data":{"statistics":{"absolute_difference":null,"average":2504.25,"ips":399321.1540381352,"maximum":3255.0,"median":2463.0,"minimum":2178.0,"mode":null,"percentiles":{"50":2463.0,"99":3255.0},"relative_less":null,"relative_more":null,"sample_size":16,"std_dev":259.8213488790583,"std_dev_ips":41430.43261580533,"std_dev_ratio":0.1037521608781305},"samples":[2532.0,2450.0,2447.0,2501.0,2.4e3,2310.0,3255.0,2198.0,2476.0,2827.0,2349.0,2607.0,2688.0,2178.0,2365.0,2485.0]},"memory_usage_data":{"statistics":{"absolute_difference":null,"average":10240.0,"ips":null,"maximum":10240,"median":10240.0,"minimum":10240,"mode":10240,"percentiles":{"50":10240.0,"99":10240.0},"relative_less":null,"relative_more":null,"sample_size":4,"std_dev":0.0,"std_dev_ips":null,"std_dev_ratio":0.0},"samples":[10240,10240,10240,10240]},"tag":null},{"name":"Arrays.concat/2 (A.Vector)","job_name":"Arrays.concat/2 (A.Vector)","input_name":"0000700","run_time_data":{"statistics":{"absolute_difference":42017.9375,"average":44522.1875,"ips":22460.711302651067,"maximum":55491.0,"median":43714.0,"minimum":41178.0,"mode":null,"percentiles":{"50":43714.0,"99":55491.0},"relative_less":0.05624723627966393,"relative_more":17.778651292802238,"sample_size":16,"std_dev":3523.572074259302,"std_dev_ips":1777.5841565291817,"std_dev_ratio":0.07914193511402157},"samples":[47795.0,46967.0,41732.0,43584.0,42731.0,45288.0,44984.0,42183.0,42458.0,44221.0,43844.0,41419.0,45868.0,42612.0,55491.0,41178.0]},"memory_usage_data":{"statistics":{"absolute_difference":60368.0,"average":70608.0,"ips":null,"maximum":70608,"median":70608.0,"minimum":70608,"mode":70608,"percentiles":{"50":70608.0,"99":70608.0},"relative_less":0.14502605937004306,"relative_more":6.8953125,"sample_size":5,"std_dev":0.0,"std_dev_ips":null,"std_dev_ratio":0.0},"samples":[70608,70608,70608,70608,70608]},"tag":null},{"name":"Arrays.concat/2 (ErlangArray)","job_name":"Arrays.concat/2 (ErlangArray)","input_name":"0000700","run_time_data":{"statistics":{"absolute_difference":246920.0625,"average":249424.3125,"ips":4009.2322595857613,"maximum":418322.0,"median":237441.0,"minimum":223720.0,"mode":null,"percentiles":{"50":237441.0,"99":418322.0},"relative_less":0.010040119886067643,"relative_more":99.60040431266846,"sample_size":16,"std_dev":46113.84613572334,"std_dev_ips":741.2313486517728,"std_dev_ratio":0.1848811195409162},"samples":[233774.0,250664.0,245868.0,223720.0,246070.0,231832.0,231595.0,242342.0,223745.0,418322.0,237202.0,232044.0,237680.0,262409.0,240234.0,233288.0]},"memory_usage_data":{"statistics":{"absolute_difference":326264.0,"average":336504.0,"ips":null,"maximum":336504,"median":336504.0,"minimum":336504,"mode":336504,"percentiles":{"50":336504.0,"99":336504.0},"relative_less":0.030430544659201673,"relative_more":32.86171875,"sample_size":5,"std_dev":0.0,"std_dev_ips":null,"std_dev_ratio":0.0},"samples":[336504,336504,336504,336504,336504]},"tag":null},{"name":"Arrays.concat/2 (MapArray)","job_name":"Arrays.concat/2 (MapArray)","input_name":"0000700","run_time_data":{"statistics":{"absolute_difference":256733.0,"average":259237.25,"ips":3857.4703288204146,"maximum":405199.0,"median":235727.0,"minimum":221054.0,"mode":null,"percentiles":{"50":235727.0,"99":405199.0},"relative_less":0.009660070070948523,"relative_more":103.51891783967255,"sample_size":16,"std_dev":53501.834518702875,"std_dev_ips":796.1114353487246,"std_dev_ratio":0.20638173919335617},"samples":[221054.0,235193.0,288571.0,239694.0,405199.0,227194.0,229078.0,365042.0,231820.0,271315.0,276592.0,227952.0,222893.0,231958.0,236261.0,237980.0]},"memory_usage_data":{"statistics":{"absolute_difference":288952.0,"average":299192.0,"ips":null,"maximum":299192,"median":299192.0,"minimum":299192,"mode":299192,"percentiles":{"50":299192.0,"99":299192.0},"relative_less":0.03422551405117784,"relative_more":29.21796875,"sample_size":5,"std_dev":0.0,"std_dev_ips":null,"std_dev_ratio":0.0},"samples":[299192,299192,299192,299192,299192]},"tag":null}];
+      var inputHeadline = " (0000700)";
+
+      
+        drawIpsComparisonChart(scenarios, inputHeadline);
+        drawRunTimeComparisonBoxPlot(scenarios, inputHeadline);
+      
+
+      
+        drawMemoryComparisonChart(scenarios, inputHeadline);
+        drawMemoryComparisonBoxPlot(scenarios, inputHeadline);
+      
+    </script>
+  </body>
+</html>

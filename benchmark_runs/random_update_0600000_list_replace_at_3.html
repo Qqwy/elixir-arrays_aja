@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+  <span class="input-label">
+    0600000
+  </span>
+
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.12.0</li>
+    <li>Erlang: 24.0.1</li>
+    <li>Operating system: Linux</li>
+    <li>Available memory: 7.60 GB</li>
+    <li>CPU Information: Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz</li>
+    <li>Number of Available Cores: 8</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          <a name="run_time" href="#run_time">List.replace_at/3 Run Time</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual run time distribution for List.replace_at/3.
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">List.replace_at/3</td>
+        
+        
+          <td>0.171 K</td>
+          <td>5841.11 μs</td>
+          <td>±88.69%</td>
+          <td>4349.25 μs</td>
+          <td>none</td>
+          <td>23.87 μs</td>
+          <td>26651.90 μs</td>
+        
+        <td>190</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-times-histogram" class="plot"></div>
+        </section>
+        <section class="benchee-plot-container">
+          <div id="raw-run-times" class="plot"></div>
+        </section>
+      </article>
+    
+
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.0.1 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.0</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-1.30.1.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenario = {"name":"List.replace_at/3","job_name":"List.replace_at/3","input_name":"0600000","run_time_data":{"statistics":{"absolute_difference":5838711.917483583,"average":5841111.684210527,"ips":171.20028755881563,"maximum":26651903.0,"median":4349254.0,"minimum":23868.0,"mode":null,"percentiles":{"50":4349254.0,"99":24033568.19000001},"relative_less":4.1084075372688065e-4,"relative_more":2434.0331160641904,"sample_size":190,"std_dev":5180384.457680552,"std_dev_ips":151.8346775011201,"std_dev_ratio":0.8868833088201297},"samples":[7381139.0,11645267.0,5016653.0,7057209.0,3772272.0,1084568.0,1429456.0,1161594.0,2186945.0,10300691.0,23868.0,956327.0,7967996.0,2876002.0,10659363.0,694251.0,8223375.0,2682348.0,2571458.0,3386744.0,11253782.0,1253324.0,183699.0,8603055.0,3573657.0,3349879.0,11818138.0,3605046.0,110817.0,26651903.0,143148.0,7830227.0,12382287.0,3374637.0,10439484.0,1450814.0,8461707.0,1716454.0,1621121.0,11196627.0,7858831.0,8727567.0,5145668.0,255478.0,8001942.0,2008947.0,1000587.0,6937549.0,1063867.0,7730799.0,19176548.0,7968434.0,7374193.0,2748556.0,225662.0,23334069.0,1635718.0,8466194.0,17010452.0,6721333.0,3446069.0,2972688.0,3930316.0,3500068.0,2299218.0,2724980.0,1028883.0,9477852.0,408343.0,15871043.0,12291895.0,4008247.0,11784208.0,482602.0,7538554.0,1226346.0,8161619.0,639013.0,23774612.0,8348114.0,4097203.0,349389.0,7627946.0,12964543.0,8877402.0,8636332.0,2310209.0,288947.0,8066623.0,895504.0,8478913.0,11563150.0,2471224.0,172080.0,6502420.0,8017448.0,21452120.0,8191474.0,5652710.0,2895803.0,1004803.0,7173647.0,10300037.0,1861297.0,481254.0,23252997.0,1699908.0,8669277.0,16176852.0,7477424.0,6926414.0,2952796.0,434512.0,16685082.0,4779015.0,4352818.0,1069801.0,1925724.0,607701.0,8222302.0,3111395.0,1417553.0,10247540.0,515354.0,192652.0,9043663.0,12223650.0,3837520.0,9335173.0,1921469.0,9148360.0,1504353.0,1136043.0,8432860.0,11359432.0,5793037.0,6575987.0,50581.0,8608160.0,3527618.0,1478538.0,2070023.0,10845641.0,1321142.0,10597796.0,3377654.0,11480672.0,4986674.0,7732336.0,1431305.0,1450120.0,2208947.0,10644195.0,1180471.0,649791.0,7540995.0,3366176.0,3966476.0,482869.0,7966797.0,3468780.0,1164066.0,80663.0,6320383.0,9803349.0,1753897.0,8788435.0,702532.0,7207272.0,10167443.0,4345690.0,9816613.0,5133731.0,2498064.0,10986744.0,1749070.0,442304.0,16519935.0,4561389.0,4761816.0,9566838.0,12194763.0,4031124.0,8908541.0,1465381.0,10592176.0,4506366.0,321343.0,975605.0,1246392.0]},"memory_usage_data":{"statistics":{"absolute_difference":null,"average":null,"ips":null,"maximum":null,"median":null,"minimum":null,"mode":null,"percentiles":null,"relative_less":null,"relative_more":null,"sample_size":0,"std_dev":null,"std_dev_ips":null,"std_dev_ratio":null},"samples":[]},"tag":null};
+
+      var inputHeadline = " (0600000)"
+
+      
+        drawRunTimeHistogram(scenario, inputHeadline);
+        drawRawRunTimeChart(scenario, inputHeadline);
+      
+
+      
+    </script>
+  </body>
+</html>

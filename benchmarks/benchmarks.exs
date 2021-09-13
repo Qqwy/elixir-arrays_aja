@@ -1,24 +1,47 @@
 defmodule Benchmarks do
-  @warmup 0.5
-  @time 0.5
+  @warmup 1
+  @time 2
   @memory_time 0.5
   @parallel 1
 
-  @inputs (
-  (5..20)
-  |> Enum.map(&Integer.pow(2, &1))
-  |> Enum.map(&(1..&1))
-  |> Enum.map(fn range ->
-    name = range.last |> Integer.to_string |> String.pad_leading(10, "0")
-    {"#{name} elements", range}
-  end)
-  )
+  # @inputs (
+  # (5..20)
+  # |> Enum.map(&Integer.pow(2, &1))
+  # |> Enum.map(&(1..&1))
+  # |> Enum.map(fn range ->
+  #   name = range.last |> Integer.to_string |> String.pad_leading(10, "0")
+  #   {"#{name} elements", range}
+  # end)
+  # )
+
+  def build_inputs(max_exp \\ 6) do
+    for exp <- 0..max_exp,
+      scale = trunc(:math.pow(10, exp)),
+      # iterations = trunc(:math.pow(10, iterations_exp)),
+      factor <- if(exp == max_exp, do: [1], else: 1..9) do
+        scale * factor
+      end
+      |> Enum.map(fn size -> {padded_int(size, max_exp + 1), (1..size)} end)
+  end
+
+  # defp build_map_from_range(range) do
+  #   range
+  #   |> Enum.map(&({&1, &1}))
+  #   |> Enum.into(%{})
+  # end
+
+  defp padded_int(integer, max_pad) do
+    integer
+    |> Integer.to_string
+    |> String.pad_leading(max_pad, "0")
+  end
+
 
   def run_benchmarks() do
-    concat_benchmark()
-    # random_access_benchmark()
+    # concat_benchmark()
+    random_access_benchmark()
     random_update_benchmark()
-    # append_benchmark()
+    append_benchmark()
   end
 
   def concat_benchmark do
@@ -70,12 +93,12 @@ defmodule Benchmarks do
       }
       },
       after_each: fn _ -> :erlang.garbage_collect() end, # make garbage collection unlikely to occur _during_ benchmark.
-      inputs: @inputs,
+      inputs: build_inputs(6),
       warmup: @warmup,
       time: @time,
       memory_time: @memory_time,
       parallel: @parallel,
-      pre_check: true,
+      # pre_check: true,
       formatters: [
         Benchee.Formatters.Console,
         {Benchee.Formatters.CSV, file: "benchmark_runs/concat.csv"},
@@ -138,11 +161,11 @@ defmodule Benchmarks do
       }
       },
       after_each: fn _ -> :erlang.garbage_collect() end, # make garbage collection unlikely to occur _during_ benchmark.
-      inputs: @inputs,
+      inputs: build_inputs(6),
       warmup: @warmup,
       time: @time,
       parallel: @parallel,
-      pre_check: true,
+      # pre_check: true,
       # memory_time: @memory_time,
       formatters: [
         Benchee.Formatters.Console,
@@ -202,11 +225,11 @@ defmodule Benchmarks do
         |> Map.put(:value, :rand.uniform())
       end,
       after_each: fn _ -> :erlang.garbage_collect() end, # make garbage collection unlikely to occur _during_ benchmark.
-      inputs: @inputs,
+      inputs: build_inputs(6),
       warmup: @warmup,
       time: @time,
       parallel: @parallel,
-      pre_check: true,
+      # pre_check: true,
       # memory_time: @memory_time,
       formatters: [
         Benchee.Formatters.Console,
@@ -273,12 +296,12 @@ defmodule Benchmarks do
         %{range: range, value: :rand.uniform(range.last)}
       end,
       after_each: fn _ -> :erlang.garbage_collect() end, # make garbage collection unlikely to occur _during_ benchmark.
-      inputs: @inputs,
+      inputs: build_inputs(6),
       warmup: @warmup,
       time: @time,
       memory_time: @memory_time,
       parallel: @parallel,
-      pre_check: true,
+      # pre_check: true,
       formatters: [
         Benchee.Formatters.Console,
         {Benchee.Formatters.CSV, file: "benchmark_runs/append.csv"},

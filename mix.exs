@@ -44,6 +44,7 @@ defmodule ArraysAja.MixProject do
 
       {:gnuplot, "~> 1.20", only: [:dev]},
       {:csv, "~> 2.4", only: [:dev]},
+      {:erlang_pmp, "~> 0.1.1", only: [:dev]}
     ]
   end
 

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+  <span class="input-label">
+    0500000
+  </span>
+
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.12.0</li>
+    <li>Erlang: 24.0.1</li>
+    <li>Operating system: Linux</li>
+    <li>Available memory: 7.60 GB</li>
+    <li>CPU Information: Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz</li>
+    <li>Number of Available Cores: 8</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          <a name="run_time" href="#run_time">List.replace_at/3 Run Time</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual run time distribution for List.replace_at/3.
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">List.replace_at/3</td>
+        
+        
+          <td>0.26 K</td>
+          <td>3873.82 μs</td>
+          <td>±89.94%</td>
+          <td>2442.14 μs</td>
+          <td>none</td>
+          <td>8.78 μs</td>
+          <td>16233.15 μs</td>
+        
+        <td>273</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-times-histogram" class="plot"></div>
+        </section>
+        <section class="benchee-plot-container">
+          <div id="raw-run-times" class="plot"></div>
+        </section>
+      </article>
+    
+
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.0.1 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.0</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-1.30.1.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenario = {"name":"List.replace_at/3","job_name":"List.replace_at/3","input_name":"0500000","run_time_data":{"statistics":{"absolute_difference":3871650.318689057,"average":3873823.846153846,"ips":258.1428685748985,"maximum":16233154.0,"median":2442135.0,"minimum":8778.0,"mode":null,"percentiles":{"50":2442135.0,"99":16174038.08},"relative_less":5.6108061468689e-4,"relative_more":1782.2750845848564,"sample_size":273,"std_dev":3484260.2515628315,"std_dev_ips":232.18323081286704,"std_dev_ratio":0.8994369361999267},"samples":[7126192.0,2568556.0,2152979.0,9622181.0,4112471.0,4068203.0,1504136.0,1581222.0,630431.0,5975380.0,160862.0,4744019.0,311775.0,16233154.0,1500820.0,7586034.0,1055962.0,148377.0,6701870.0,459619.0,5711597.0,6460320.0,9186111.0,951724.0,9010352.0,1149147.0,9317308.0,2670560.0,190639.0,304613.0,8027196.0,2879938.0,2995022.0,2398037.0,1408174.0,8610489.0,4348852.0,2986170.0,2943214.0,2965999.0,9758433.0,3649843.0,190382.0,6590447.0,2625795.0,1721507.0,1513636.0,1469233.0,911654.0,5102583.0,6309202.0,775427.0,5335736.0,8347562.0,4599698.0,1177112.0,8108845.0,2854436.0,10516745.0,3682314.0,1785963.0,811382.0,5592390.0,1388029.0,1194280.0,6437731.0,3060640.0,792687.0,430710.0,7671556.0,1707684.0,8900391.0,3866343.0,1202231.0,9496267.0,274469.0,6988676.0,1878952.0,189509.0,4821549.0,6429178.0,9570519.0,145413.0,7044773.0,1863098.0,406781.0,6833698.0,1038878.0,790367.0,5876613.0,2189939.0,8818097.0,2942939.0,1222609.0,8985080.0,380962.0,5223648.0,8778.0,4453088.0,7252816.0,1177355.0,6543327.0,2503491.0,1922965.0,1604264.0,1150536.0,139815.0,6728814.0,8.9372e6,3478253.0,10309624.0,1902843.0,9494416.0,1798384.0,1770577.0,857529.0,5468840.0,9126398.0,3117855.0,595117.0,387277.0,7636295.0,2643523.0,1301107.0,6642955.0,883995.0,584380.0,933238.0,6940923.0,2055088.0,2716477.0,764553.0,5627077.0,1154606.0,519513.0,6650661.0,2175549.0,1224336.0,1767384.0,8054911.0,2232790.0,2593771.0,9650677.0,1428093.0,1452115.0,8797389.0,2062331.0,9615.0,5341633.0,566789.0,248608.0,2249509.0,6371588.0,1093558.0,900411.0,7562482.0,1547371.0,6311890.0,2223574.0,1269794.0,6986256.0,9853952.0,3951394.0,2883245.0,957502.0,1913864.0,871236.0,503704.0,6726430.0,1156454.0,400612.0,6585465.0,9432059.0,881285.0,16210822.0,604614.0,4935587.0,8077851.0,219819.0,5789848.0,8983452.0,2246676.0,166232.0,16161114.0,35130.0,161264.0,9688527.0,1925785.0,1526204.0,6773484.0,2041329.0,2172553.0,8660334.0,1707781.0,7490286.0,9973215.0,1412901.0,209830.0,6120321.0,726771.0,5150307.0,8361415.0,3319068.0,2442135.0,1248230.0,7925626.0,346839.0,5918984.0,2295432.0,9510034.0,3629649.0,594244.0,69778.0,7213375.0,101768.0,2.827e5,987606.0,7136567.0,1504572.0,647547.0,7177276.0,3361946.0,1947693.0,2541496.0,12502.0,5256583.0,1491140.0,965641.0,6796996.0,1896280.0,8792457.0,1702352.0,227296.0,25243.0,7673408.0,9278405.0,959117.0,1615130.0,9012347.0,1151726.0,7035622.0,8659702.0,4.0657e6,2940184.0,1888522.0,8577421.0,2717335.0,9724827.0,96138.0,6904005.0,338670.0,6049618.0,9239317.0,2426982.0,1253510.0,6985582.0,8918514.0,1459717.0,373957.0,6428670.0,10304928.0,626485.0,803101.0,1459442.0,72825.0,52633.0,6454403.0,707023.0,529113.0,722996.0,15649071.0,3203642.0,2013710.0]},"memory_usage_data":{"statistics":{"absolute_difference":null,"average":null,"ips":null,"maximum":null,"median":null,"minimum":null,"mode":null,"percentiles":null,"relative_less":null,"relative_more":null,"sample_size":0,"std_dev":null,"std_dev_ips":null,"std_dev_ratio":null},"samples":[]},"tag":null};
+
+      var inputHeadline = " (0500000)"
+
+      
+        drawRunTimeHistogram(scenario, inputHeadline);
+        drawRawRunTimeChart(scenario, inputHeadline);
+      
+
+      
+    </script>
+  </body>
+</html>
