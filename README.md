@@ -35,7 +35,7 @@ by adding `arrays_aja` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:arrays_aja, "~> 0.1.0"}
+    {:arrays_aja, "~> 0.2.0"}
   ]
 end
 ```

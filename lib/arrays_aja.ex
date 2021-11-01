@@ -1,4 +1,4 @@
-defimpl Arrays.Protocol, for: A.Vector do
+defimpl Arrays.Protocol, for: Aja.Vector do
   defdelegate size(vector), to: @for
   defdelegate map(vector, fun), to: @for
   defdelegate reduce(vector, acc, fun), to: @for, as: :foldl
@@ -24,7 +24,7 @@ defimpl Arrays.Protocol, for: A.Vector do
       size == vector_size ->
         vector
       size > vector_size ->
-        @for.concat(vector, A.Enum.into(1..size - vector_size, fn _ -> default end))
+        @for.concat(vector, Aja.Enum.into(1..size - vector_size, fn _ -> default end))
     end
   end
   defdelegate to_list(vector), to: @for
